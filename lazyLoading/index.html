@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="./jquery-2.0.3.js"></script>
+    <script src="./lazy-loading-plugin.js"></script>
+    <style>
+      .img11 {
+        /* width: 200px; */
+        /* height: 200px; */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="header">图片懒加载插件</div>
+      <div class="body">
+        <img id="img1" class="img" src="./music.jpeg">
+        <img id="img2" class="img" src="./music.jpeg">
+        <img id="img3" class="img" src="./music.jpeg">
+        <img id="img4" class="img" src="./music.jpeg">
+        <img id="img5" class="img" src="./music.jpeg">
+        <img id="img6" class="img" src="./music.jpeg">
+        <img id="img7" class="img" src="./music.jpeg">
+        <img id="img8" class="img" src="./music.jpeg">
+        <img id="img9" class="img" src="./music.jpeg">
+        <img id="img10" class="img" src="./music.jpeg">
+        <img id="img11" class="img" src="./music.jpeg">
+        <img id="img12" class="img" src="./music.jpeg">
+        <img id="img13" class="img" src="./music.jpeg">
+      </div>
+    </div>
+  </body>
+  <script>
+    $(function () {
+      lazyLoad('.img')
+    })
+  </script>
+</html>

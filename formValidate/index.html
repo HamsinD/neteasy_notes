@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="./jquery-2.0.3.js"></script>
+    <script src="./formValidate.js"></script>
+    <style>
+      #app {
+        padding: 10px;
+      }
+      .header {
+        padding: 20px 120px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .row {
+        width: 100%;
+        line-height: 30px;
+        margin: 40px 0;
+      }
+      span {
+        display: block;
+        text-align: right;
+        width: 100px;
+        float: left;
+      }
+      input {
+        display: block;
+        margin-left: 120px;
+        width: 400px;
+        height: 30px;
+        border-radius: 4px;
+        outline: none;
+        border-width: 1px;
+        border-color: #bbb;
+      }
+      .error-msg {
+        width: 100%;
+        text-align: left;
+        line-height: 20px;
+        font-size: 14px;
+        padding-left: 120px;
+        color: red;
+      }
+      .disabled {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="header">微量级表单验证插件</div>
+      <div class="body">
+        <form id="form">
+          <div class="row">
+            <span>邮箱：</span>
+            <input type="text" name="emil" id="input1"></input>
+          </div>
+          <div class="row">
+            <span>电话：</span>
+            <input type="text" name="phone" id="input2"></input>
+          </div>
+          <div class="row">
+            <span>身份证号码：</span>
+            <input type="text" name="idCard" id="input3"></input>
+          </div>
+          <div class="row">
+            <span>必填：</span>
+            <input type="text" name="required" id="input4"></input>
+          </div>
+        </form>
+        
+      </div>
+    </div>
+  </body>
+  <script>
+    /*
+      validate()是扩展在jQuery原型上，传入参数说明：
+      支持传入Object，传入Object中键名对应input元素的name属性值，值为一个对象，
+      其中包括defaultEvent校验触发事件名（可以是change, blur, keyup等，
+      errMsg是校验失败的提示语句，
+      validateReg是传入的正则校验规则，传入的必须为一个正则表达式。
+    */
+
+
+    $(function () {
+      $('form').validate({
+        emil: { 
+          defaultEvent: 'blur',
+          errMsg: '请检查邮箱地址是否正确',
+          validateReg: /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/g
+        },
+        phone: {
+          defaultEvent: 'blur',
+          errMsg: '请检查电话号码是否正确',
+          validateReg: /^(13[0-9]|14[0-9]|15[0-9]|166|17[0-9]|18[0-9]|19[8|9])\d{8}$/g
+        },
+        idCard: {
+          defaultEvent: 'blur',
+          errMsg: '请检查身份证号码是否正确',
+          validateReg: /^((\d{18})|([0-9x]{18})|([0-9X]{18}))$/g
+        },
+        required: {
+          defaultEvent: 'blur',
+          errMsg: '输入不能为空',
+          validateReg: /\S+/g
+        }
+      })
+    })
+  </script>
+</html>
