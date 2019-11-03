@@ -7,4 +7,6 @@
 
 > 源码：lazyLoading
 
-> Demo: InputNumber
+> Demo: Input-number(react)
+
+> Demo: react-confirm-demo(react)
