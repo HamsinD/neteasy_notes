@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@font-face {
+  font-family: 'iconfont';  /* project id 1268964 */
+  src: url('//at.alicdn.com/t/font_1268964_vqf6o765xb.eot');
+  src: url('//at.alicdn.com/t/font_1268964_vqf6o765xb.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1268964_vqf6o765xb.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1268964_vqf6o765xb.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1268964_vqf6o765xb.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1268964_vqf6o765xb.svg#iconfont') format('svg');
+}
